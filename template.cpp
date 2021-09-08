@@ -1,9 +1,6 @@
-//インクルードなど
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-
-//イテレーション
 #define REP(i, a, b) for(int i = (a);i < (b);++i)
 #define REPS(i, a, b) for(int i = (b)-1;i >= (a);--i)
 #define rep(i, n) REP(i, 0, n)
@@ -17,16 +14,16 @@ typedef long long ll;
 #define S second
 //出力(空白区切りで昇順に)
 #define coutALL(x) for(auto i=x.begin();i!=--x.end();i++)cout<<*i<<" ";cout<<*--x.end()<<endl;
-
 //aをbで割る時の繰上げ,繰り下げ
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
-
 #define endl '\n'
 
 signed main(){
 	cin.tie(0);cout.tie(0);
 	ios_base::sync_with_stdio(false);
+	//code start
 	
+	//code end
 	return 0;
 }
