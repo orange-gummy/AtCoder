@@ -18,12 +18,41 @@ typedef long long ll;
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
-#define int long long int
+
 signed main(){
-	cin.tie(0);cout.tie(0);
-	ios_base::sync_with_stdio(false);
+	//cin.tie(0);//cout.tie(0);
+	//ios_base::sync_with_stdio(false);
 	//code start
-	
+	int N;cin >> N;
+	rep(i,N){
+		long long int ans =0;
+		long long int a,b,c;cin >> a >> b >> c;
+		long long int bb=b/2;
+		long long int cbb=min(c,bb);
+		ans+=cbb;
+		c-=cbb;
+		bb-=cbb;
+		long long int aa = a/2;
+		a = a%2;
+		long long int abb=min(aa,bb);
+		ans+=abb;
+		aa-=abb;
+		bb-=abb;
+		a+=aa*2;
+		long long int cc=c/2;
+		c=c%2;
+		long long int acc = min(a,cc);
+		cc-=acc;
+		a-=acc;
+		ans+=acc;
+		if(a>=3) {
+			ans+=c;
+			a-=3;
+		}
+		ans += a/5;
+		
+		cout << ans << endl;
+	}
 	//code end
 	return 0;
 }

@@ -18,11 +18,18 @@ typedef long long ll;
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
-#define int long long int
+
 signed main(){
 	cin.tie(0);cout.tie(0);
 	ios_base::sync_with_stdio(false);
 	//code start
+	int N,M,D;cin>>N>>M>>D;
+	int ans=-1;
+	vector<pair<int,int>> A(N);
+	rep(i,N){
+		cin >> A[i].F >> A[i].S;
+	}
+	sort(ALL(A));
 	
 	//code end
 	return 0;

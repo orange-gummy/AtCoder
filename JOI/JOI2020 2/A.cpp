@@ -20,10 +20,41 @@ ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
 #define int long long int
 signed main(){
-	cin.tie(0);cout.tie(0);
-	ios_base::sync_with_stdio(false);
+	//cin.tie(0);//cout.tie(0);
+	//ios_base::sync_with_stdio(false);
 	//code start
-	
+	int N,B;cin >> N >> B;
+	vector<int> A(N);
+	int migi=0,hidari=-1;
+	rep(i,N){
+		char c;cin >> c;
+		if(c == '.'){
+			A[i] = 0;
+		}
+		else{
+			A[i] = 1;
+			if(hidari==-1) hidari=i;
+			migi = i;
+		}
+	}
+	int ans=0;
+	int left=0,right=0;
+	rep(i,N){
+		if(A[i]==1){
+			ans += abs(B-1-i)*2;
+			if(i<B-1) ++left;
+			else ++right;
+		}
+	}
+	if(left<right){
+		ans -= migi-(B-1);
+		ans += (right-left-1)*B*2;
+	}
+	else{
+		ans -= B-1 -hidari;
+		ans += (left-right)*(N-B+1)*2;
+	}
+	cout << ans << endl;
 	//code end
 	return 0;
 }

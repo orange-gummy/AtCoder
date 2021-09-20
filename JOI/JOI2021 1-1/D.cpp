@@ -18,12 +18,27 @@ typedef long long ll;
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
-#define int long long int
+
 signed main(){
 	cin.tie(0);cout.tie(0);
 	ios_base::sync_with_stdio(false);
 	//code start
-	
+	int N,M;cin >> N >> M;
+	set<int> key;
+	vector<int> box(N);
+	rep(i,N){
+		cin >> box[i];
+	}
+	rep(i,M){
+		int k;
+		cin >> k;
+		key.insert(k);
+	}
+	int ans=0;
+	rep(i,N){
+		if(key.count(box[i])==1) ++ans;
+	}
+	cout << ans << endl;
 	//code end
 	return 0;
 }

@@ -13,17 +13,23 @@ typedef long long ll;
 #define F first
 #define S second
 //出力(空白区切りで昇順に)
-#define coutALL(x) for(auto i=x.begin();i!=--x.end();i++)cout<<*i<<" ";cout<<*--x.end()<<endl;
+#define coutALL(x) for(auto i=x.begin();i!=--x.end();i++)cout<<*i<<endl;cout<<*--x.end()<<endl;
 //aをbで割る時の繰上げ,繰り下げ
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
-#define int long long int
+
 signed main(){
 	cin.tie(0);cout.tie(0);
 	ios_base::sync_with_stdio(false);
 	//code start
-	
+	int N,M;cin >> N >> M;
+	vector<int> A(N+M);
+	rep(i,N+M){
+		cin >> A[i];
+	}
+	sort(ALL(A));
+	coutALL(A);
 	//code end
 	return 0;
 }

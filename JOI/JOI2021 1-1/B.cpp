@@ -18,12 +18,14 @@ typedef long long ll;
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
-#define int long long int
+
 signed main(){
 	cin.tie(0);cout.tie(0);
 	ios_base::sync_with_stdio(false);
 	//code start
-	
+	int X,Y,Z;cin >> X >> Y >> Z;
+	if(Z < X+Y) cout << '0' << endl;
+	else cout << '1' << endl;
 	//code end
 	return 0;
 }
