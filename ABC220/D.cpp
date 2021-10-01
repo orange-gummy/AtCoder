@@ -40,7 +40,6 @@ signed main(){
 	rep(i,N){
 		cin >> A[i];
 	}
-	dp
 	//code end
 	return 0;
 }
