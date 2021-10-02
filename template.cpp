@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-using Graph = vector<vector<int>>;
 typedef long long ll;
 #define REP(i, a, b) for(int i = (a);i < (b);++i)
 #define REPS(i, a, b) for(int i = (b)-1;i >= (a);--i)
@@ -21,7 +20,6 @@ typedef long long ll;
 ll myceil(ll a,ll b){return (a+(b-1))/b;}
 ll myfloor(ll a,ll b){return a/b;}
 #define endl '\n'
-#define int long long int
 
 signed main(){
 	cin.tie(0);cout.tie(0);
