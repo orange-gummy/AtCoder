@@ -8,7 +8,7 @@
 		"type": "shell",
 		"command": "g++",
 		"args":[
-			"-g", "${file}", "-o", "${fileBasenameNoExtension}", ";", "${fileBasenameNoExtension}.exe"
+			"-g","${file}"
 		],
 		"group":{
 		  "kind": "build",
