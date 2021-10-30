@@ -1,2 +1,2 @@
 # AtCoder
-　atcoderのプログラムのバックアップ用
+　atcoderのプログラム
