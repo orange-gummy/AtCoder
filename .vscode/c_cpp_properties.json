@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "ac-library"
             ],
             "defines": [
                 "_DEBUG",
@@ -12,8 +13,12 @@
             ],
             "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
             "cStandard": "gnu17",
-            "cppStandard": "gnu++14",
-            "intelliSenseMode": "windows-gcc-x86"
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x86",
+            "compilerArgs": [
+                "std=c++17",
+                "-I"
+            ]
         }
     ],
     "version": 4
