@@ -1,6 +1,6 @@
 /**
 *    author:  orangegummy
-*    created: 21.12.2021 23:57:48
+*    created: 25.12.2021 20:03:21
 **/
 #include <bits/stdc++.h>
 #include <atcoder/all>
@@ -49,11 +49,19 @@ int main() {
   cin.tie(0);cout.tie(0);
   ios_base::sync_with_stdio(false);
   //code start
-  ll n,p,q;cin>>n>>p>>q;
-  vll A(n);
-  rep(i,n)cin>>A[i];
-  ll ans=0;
-  rep(i,n)rep(j,i)rep(k,j)rep(l,k)rep(m,l)if((ll)A[i]%p*A[j]%p*A[k]%p*A[l]%p*A[m]%p==q)++ans;
+  int n,m;cin>>n>>m;
+  vvi A(n);
+  rep(i,m){
+    int a,b;cin>>a>>b;--a;--b;
+    A[a].pb(b);
+    A[b].pb(a);
+  }
+  int ans=0;
+  rep(i,n){
+    int num=0;
+    for(int j:A[i])if(j<i)++num;
+    if(num==1)++ans;
+  }
   cout<<ans<<endl;
   //code end
   return 0;
